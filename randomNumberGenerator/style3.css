@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#roll {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: pink;
+}
+
+#rolled {
+    font-size: 1.5em;
+}
