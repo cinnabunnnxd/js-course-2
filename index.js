@@ -199,9 +199,9 @@ console.log(gradeResult);
 
 const fullName1 = "LeBron James";
 
-let firstName =  fullName1.slice(0, 7);
+let firstName = fullName1.slice(0, 7);
 console.log(firstName); // Lebron
-let lastName = fullName1.slice(7,  12);
+let lastName = fullName1.slice(7, 12);
 console.log(lastName)  // James
 
 let firstName1 = fullName1.slice(0, fullName1.indexOf(" "));
@@ -212,13 +212,13 @@ console.log(lastName1);
 
 const email = "lebronjames@gmail.com";
 
-let username3 = email.slice(0,  email.indexOf("@"));
+let username3 = email.slice(0, email.indexOf("@"));
 console.log(username3)
 
 ////
 // method chaining
 
-let username4 = window.prompt("Create an username:")
+let username4 = "bUrger"
 
 // no chaining
 
@@ -235,3 +235,45 @@ console.log(username4)
 // with  chaining
 
 username4 = username4.trim().charAt(0).toUpperCase() + username4.trim().slice(1).toLowerCase;
+
+////
+// logical operators = use to combine or manipulate4 boolean values (true or false)
+
+// && - and || - or ! - not
+
+////
+// strict equality
+
+// = assignment operator
+// == comparison operator (compare if values are equal)
+// === strict operator (compare if values are equal & datatype are equal)
+// != ineqiality operator
+// !== strict inequality operator
+
+////
+// while loop = will repeat some code WHILE some codition is true
+
+// let name = "";
+
+// while (name === "" || name === null) {
+//name = window.prompt(`Enter your name:`);
+// }
+// console.log(`Hello ${name}`);
+
+////
+// for loop = reapeats some code in a limited amount of times
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+for (let a = 10; a > 0; a -= 2) {
+    console.log(a);
+}
+
+
+
+
+
+
+
