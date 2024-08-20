@@ -218,20 +218,71 @@ console.log(username3)
 ////
 // method chaining
 
-let username4 = window.prompt("Create an username:")
+// let username4 = window.prompt("Create an username:")
 
 // no chaining
 
-username4 = username4.trim();
-let letter = username4.charAt(0);
-letter = letter.toUpperCase();
+// username4 = username4.trim();
+// let letter = username4.charAt(0);
+// letter = letter.toUpperCase();
 
-let extraChars = username4.slice(1);
-extraChars = extraChars.toLocaleLowerCase();
-username4 = letter + extraChars;
+// let extraChars = username4.slice(1);
+// extraChars = extraChars.toLocaleLowerCase();
+// username4 = letter + extraChars;
 
-console.log(username4)
+// console.log(username4)
 
 // with  chaining
 
-username4 = username4.trim().charAt(0).toUpperCase() + username4.trim().slice(1).toLowerCase;
+// username4 = username4.trim().charAt(0).toUpperCase() + username4.trim().slice(1).toLowerCase;
+
+// const tite = document.querySelector('#lebron')
+
+// fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+// .then(response => response.json())
+// .then ((bronny) => {
+//     console.log(bronny)
+// })
+// .catch((errr) =>{
+//     console.log(errr)
+// })
+const submitt = document.querySelector('.submit')
+const apiKey = 'c40063e5acce0c711af35da046cf11c9'
+const wordSearch = (word) => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${word}&appid=${apiKey}`)
+.then(response => {
+    if(!response.ok) throw new Error ('cannot access')
+    return response.json()
+}).then(data => {
+    console.log(data)
+    ///location variables
+    const latitude = data?.coord?.lat
+    const longitude = data?.coord?.lon
+    const cityName = data?.name
+    const country = data?.sys?.country
+    //temp variables
+    const temp = data?.main?.temp
+    const tempMax = data?.main?.temp_max
+    const tempMin = data?.main?.temp_min
+    const pressure = data?.main?.pressure
+
+    const humid = data?.main?.humidity
+    const weather = data?.weather[0]?.main
+    const weatherDesc = data?.weather[0]?.description
+    const windDeg = data?.wind?.deg
+    const windSpeed = data?.wind?.speed
+
+}).catch(err => {
+    console.log(err)
+}) 
+
+submitt.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const input = document.querySelector('#search').value.trim()
+
+    if (input != ''){
+        console.log("meron")
+        wordSearch(input)
+    } else {
+        console.log("wala")
+    }
+})
