@@ -273,15 +273,93 @@ for (let nibba of nibbas) {
     console.log(nibba)
 }
 
+////
+// spread operator = allows an iterable such as an array or string to be expanded
+//                    into seperate elements (unpacks the elements)
+
+let nibbas2 = ["Tyrone", "Davoyne Shower Handle", "Yunjin"]
+console.log(nibbas2);
+
+let numbers2 = [1, 2, 3, 4, 5]
+let maximum = Math.max(...numbers2)
+console.log (maximum)
+
+let username4 = "Cinnabunnnxd"
+let letters = [...username4].join(".");
+console.log(letters)
+
+let join = [...nibbas2, ...numbers2]
+console.log(join)
+
+////
+// rest parameters = (...rest) allows a function work with a variable number of arguments
+//                   by bundling them into an array
+
+//              spread = expands an array into seperate elements 
+//              rest = bundles seperate elements into an array
+
+function sum (...numbers1) {
+    let result3 = 0;
+    for (let number1 of numbers1){
+        result += number1;
+    }
+    return result3
+}
+
+const total = sum(1, 2, 3, 4, 5);
+console.log(`Your total is $${total}`)
 
 
+function combineStrings(...strings){
+    return strings.join(" ");
+}
+
+const fullname = combineStrings("Mr.", "LeBron", "The", "Goat", "James")
+console.log(fullname);
 
 
+////
+// callback = a function that is passs as an argument to another function
+//          used to handle asynchronous operations
+//          1. reading a file
+//          2. network requests
+//          3. interacting with databases
+
+//          'hey, when ur dine, call this next'
+
+// function hello(callback){
+//     // setTimeout(function (){
+//         console.log("hello")
+//         callback();
+//     // }, 3000)
+    
+// }
+// function goodbye (){
+//     console.log("goodbye")
+// }
+// function leave (){
+//     console.log("leave")
+// }
+
+// hello()
 
 
+sum(displayConsole, 1, 2)
 
+function sum (callback, x, y){
+    let tangina = x + y;
+    callback(tangina)
+}
 
+function displayConsole (tangina){
+    console.log(tangina);
+}
 
+////
+// forEach() = method used to iterate over the elements of an array and apply a specified 
+//              funcion (callback) to each element
+
+//              array.forEach(callback)
 
 
 
