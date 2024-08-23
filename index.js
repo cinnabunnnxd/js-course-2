@@ -236,6 +236,64 @@ console.log(username3)
 
 // username4 = username4.trim().charAt(0).toUpperCase() + username4.trim().slice(1).toLowerCase;
 
+////
+// function = a section of reusable code.
+
+////
+// variable scope = where a variable is recognizable and accessible
+//                  (local vs global) uses local first before global
+
+let x2 = 4;
+
+function2();
+
+function function1() {
+    let x2 = 3
+    console.log(x);
+}
+
+function function2() {
+    let x2 = 5
+    console.log(x);
+}
+
+////
+// array = a variable like structure that can hold more than 1 value
+
+// nibbas.push("Curry")
+// nibbas.pop()
+// nibbas.unshift()
+// nibbas.shift()
+
+let nibbas = ["LeBron", "Embid", "A.D."]
+
+console.log(nibbas)
+
+for (let nibba of nibbas) {
+    console.log(nibba)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const tite = document.querySelector('#lebron')
 
 // fetch('https://pokeapi.co/api/v2/pokemon/ditto')
@@ -249,37 +307,37 @@ console.log(username3)
 const submitt = document.querySelector('.submit')
 const apiKey = 'c40063e5acce0c711af35da046cf11c9'
 const wordSearch = (word) => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${word}&appid=${apiKey}`)
-.then(response => {
-    if(!response.ok) throw new Error ('cannot access')
-    return response.json()
-}).then(data => {
-    console.log(data)
-    ///location variables
-    const latitude = data?.coord?.lat
-    const longitude = data?.coord?.lon
-    const cityName = data?.name
-    const country = data?.sys?.country
-    //temp variables
-    const temp = data?.main?.temp
-    const tempMax = data?.main?.temp_max
-    const tempMin = data?.main?.temp_min
-    const pressure = data?.main?.pressure
+    .then(response => {
+        if (!response.ok) throw new Error('cannot access')
+        return response.json()
+    }).then(data => {
+        console.log(data)
+        ///location variables
+        const latitude = data?.coord?.lat
+        const longitude = data?.coord?.lon
+        const cityName = data?.name
+        const country = data?.sys?.country
+        //temp variables
+        const temp = data?.main?.temp
+        const tempMax = data?.main?.temp_max
+        const tempMin = data?.main?.temp_min
+        const pressure = data?.main?.pressure
 
-    const humid = data?.main?.humidity
-    const weather = data?.weather[0]?.main
-    const weatherDesc = data?.weather[0]?.description
-    const windDeg = data?.wind?.deg
-    const windSpeed = data?.wind?.speed
+        const humid = data?.main?.humidity
+        const weather = data?.weather[0]?.main
+        const weatherDesc = data?.weather[0]?.description
+        const windDeg = data?.wind?.deg
+        const windSpeed = data?.wind?.speed
 
-}).catch(err => {
-    console.log(err)
-}) 
+    }).catch(err => {
+        console.log(err)
+    })
 
 submitt.addEventListener('submit', (e) => {
     e.preventDefault()
     const input = document.querySelector('#search').value.trim()
 
-    if (input != ''){
+    if (input != '') {
         console.log("meron")
         wordSearch(input)
     } else {
