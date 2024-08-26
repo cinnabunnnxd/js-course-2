@@ -282,7 +282,7 @@ console.log(nibbas2);
 
 let numbers2 = [1, 2, 3, 4, 5]
 let maximum = Math.max(...numbers2)
-console.log (maximum)
+console.log(maximum)
 
 let username4 = "Cinnabunnnxd"
 let letters = [...username4].join(".");
@@ -298,9 +298,9 @@ console.log(join)
 //              spread = expands an array into seperate elements 
 //              rest = bundles seperate elements into an array
 
-function sum (...numbers1) {
+function sum(...numbers1) {
     let result3 = 0;
-    for (let number1 of numbers1){
+    for (let number1 of numbers1) {
         result += number1;
     }
     return result3
@@ -310,7 +310,7 @@ const total = sum(1, 2, 3, 4, 5);
 console.log(`Your total is $${total}`)
 
 
-function combineStrings(...strings){
+function combineStrings(...strings) {
     return strings.join(" ");
 }
 
@@ -332,7 +332,7 @@ console.log(fullname);
 //         console.log("hello")
 //         callback();
 //     // }, 3000)
-    
+
 // }
 // function goodbye (){
 //     console.log("goodbye")
@@ -344,16 +344,16 @@ console.log(fullname);
 // hello()
 
 
-function summ(callback, x, y) {
-    let tangina = x + y;
-    // callback(tangina);
-}
+// function summ(callback, x, y) {
+//     let tangina = x + y;
+//     // callback(tangina);
+// }
 
-function displayConsole(tangina) {
-    console.log(tangina);
-}
+// function displayConsole(tangina) {
+//     console.log(tangina);
+// }
 
-sum(displayConsole, 1, 2);
+// sum(displayConsole, 1, 2);
 
 ////
 // forEach() = method used to iterate over the elements of an array and apply a specified 
@@ -361,29 +361,29 @@ sum(displayConsole, 1, 2);
 
 //              array.forEach(callback)
 
-let numberss = [1,2,3,4,5]
+let numberss = [1, 2, 3, 4, 5]
 
 
 numberss.forEach(display)
 
 
-function double(element, index, array){
-    array[index] = element  * 2
-    
+function double(element, index, array) {
+    array[index] = element * 2
+
 }
 
-function triple(element, index, array){
-    array[index] = element  * 3
+function triple(element, index, array) {
+    array[index] = element * 3
     // numberss.forEach(triple)
 }
 
-function squaree(element, index, array){
+function squaree(element, index, array) {
     array[index] = Math.pow(element, 2)
     //   numberss.forEach(square)
 
 }
 
-function display(element){
+function display(element) {
     console.log(element)
 }
 
@@ -392,11 +392,11 @@ let foods = ["apple", "pizza", "Dinakdakan"];
 foods.forEach(capitalize)
 foods.forEach(displayy)
 
-function upperCase(elementt, index, array){
+function upperCase(elementt, index, array) {
     array[index] = elementt.toUpperCase();
 }
 
-function capitalize(elementt, index, array){
+function capitalize(elementt, index, array) {
     array[index] = elementt.charAt(0).toUpperCase() + elementt.slice(1)
 }
 
@@ -408,13 +408,13 @@ function displayy(elementt) {
 // .map() =accepts a callback and applies that function to each
 //          element of an array, then return a new array
 
-const  numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 const squares = numbers.map(squareee)
 
 console.log(squares)
 
-function squareee(element){
- return Math.pow(element, 2)
+function squareee(element) {
+    return Math.pow(element, 2)
 }
 
 const students = ["Spongebob", "Patrick", "Squidward"]
@@ -422,7 +422,7 @@ const studentsUpper = students.map(upperCasee);
 
 console.log()
 
-function upperCasee(element){
+function upperCasee(element) {
     return element.toUpperCase();
 }
 
@@ -431,7 +431,7 @@ const formattedDates = dates.map(formatDates)
 
 console.log(formattedDates)
 
-function formatDates(element){
+function formatDates(element) {
     const parts = element.split("-")
     return `${parts[1]}/${parts[2]}/${parts[0]}`
 }
@@ -439,31 +439,31 @@ function formatDates(element){
 ////
 // .filter() = creates a new array by filtering out elements
 
-let numbersss = [1,2,3,4,5,6,7,8,9,10]
+let numbersss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let evenNumss = numbersss.filter(isEven)
-let oddNumss =numbersss.filter(isOdd)
+let oddNumss = numbersss.filter(isOdd)
 
 console.log(oddNumss)
 
-function isEven(element){
+function isEven(element) {
     return element % 2 === 0;
 }
 
-function isOdd(element){
+function isOdd(element) {
     return element % 2 !== 0;
 }
 
-const ages = [16,17,18,19,20,99]
+const ages = [16, 17, 18, 19, 20, 99]
 const isAdultt = ages.filter(isAdult)
 const isChildren = ages.filter(isChild)
 
 console.log(isAdultt)
 
-function isAdult(element){
+function isAdult(element) {
     return element >= 18;
 }
 
-function isChild(element){
+function isChild(element) {
     return element <= 18;
 }
 
@@ -472,11 +472,11 @@ const shortWords = words.filter(getShortWords)
 
 console.log(shortWords)
 
-function getShortWords (element){
+function getShortWords(element) {
     return element.length <= 6;
 }
 
-function getLongWords (element){
+function getLongWords(element) {
     return element.length > 7;
 }
 
@@ -488,28 +488,28 @@ const totall = values.reduce(sum2)
 
 console.log(`$${totall.toFixed(2)}`)
 
-function sum2 (accumulator, element){
+function sum2(accumulator, element) {
     return accumulator + element
 }
 
-const grades = [75,80,89,90,99,100]
+const grades = [75, 80, 89, 90, 99, 100]
 const maximumm = grades.reduce(getMax)
 
 console.log(maximumm)
 
-function getMax (accumulator, element){
-    return Math.max(accumulator,element)
+function getMax(accumulator, element) {
+    return Math.max(accumulator, element)
 }
 
-function getMin (accumulator, element){
-    return Math.min(accumulator,element)
+function getMin(accumulator, element) {
+    return Math.min(accumulator, element)
 }
 
 ////
 // function declaration = define a reusable block of code 
 //                        that performs a specific task
 
-function sayHello(){
+function sayHello() {
     console.log("Hello!")
 }
 
@@ -527,19 +527,19 @@ function sayHello(){
 
 const numberrs = [1, 2, 3, 4, 5, 6, 7]
 
-const cubes = numberrs.map(function cube (element){
-    return Math.pow(element , 3)
+const cubes = numberrs.map(function cube(element) {
+    return Math.pow(element, 3)
 })
-const squareeee = numberrs.map(function(element){
-    return Math.pow(element,2)
+const squareeee = numberrs.map(function (element) {
+    return Math.pow(element, 2)
 })
-const isEvenn = numberrs.filter(function(element){
-    return element % 2 === 0 ;
+const isEvenn = numberrs.filter(function (element) {
+    return element % 2 === 0;
 })
-const isOddd = numberrs.filter(function(element){
-    return element % 2 !== 0 ;
+const isOddd = numberrs.filter(function (element) {
+    return element % 2 !== 0;
 })
-const total2 = numberrs.reduce(function(accumulator, element){
+const total2 = numberrs.reduce(function (accumulator, element) {
     return accumulator + element
 })
 
@@ -560,15 +560,15 @@ herllo()
 const herllo2 = (name) => console.log(`jellow ${name}`)
 herllo2("KKillo")
 
-setTimeout (() => console.log('hellow'), 2000)
+setTimeout(() => console.log('hellow'), 2000)
 
 const numberrs2 = [1, 2, 3, 4, 5, 6, 7]
 
 const cubes2 = numberrs.map((element) => Math.pow(element, 3))
 
 const squareeee2 = numberrs.map((element) => Math.pow(element, 2))
-const isEvenn2 = numberrs.filter((element) => element % 2 === 0 )
-const isOddd2 = numberrs.filter((element) => element % 2 !== 0 )
+const isEvenn2 = numberrs.filter((element) => element % 2 === 0)
+const isOddd2 = numberrs.filter((element) => element % 2 !== 0)
 const total22 = numberrs.reduce((accumulator, element) => accumulator + element)
 
 console.log(total22)
@@ -584,7 +584,7 @@ const person1 = {
     lastName: "James",
     age: 39,
     isEmployed: true,
-    sayHello: function (){console.log("tagnina mo:)")}
+    sayHello: function () { console.log("tagnina mo:)") }
 }
 
 console.log(person1.firstName)
@@ -608,7 +608,7 @@ const person2 = {
 const person3 = {
     name: "Levron",
     favFood: "Dinakdakan",
-    sayHello: function(){ console.log(`Ako to si${this.name}`)}
+    sayHello: function () { console.log(`Ako to si${this.name}`) }
 }
 
 person3.sayHello()
@@ -617,16 +617,16 @@ person3.sayHello()
 // constructor = special method for defining the properties annd 
 //              methods of objects
 
-function car (producer, model, year, color){
+function car(producer, model, year, color) {
     this.producer = producer,
-    this.model = model,
-    this.year = year,
-    this.color = color 
-    this.drive = function(){console.log(`You are driving the ${producer}`)}
+        this.model = model,
+        this.year = year,
+        this.color = color
+    this.drive = function () { console.log(`You are driving the ${producer}`) }
 }
 
-const car1 = new car ("Aston Martin", "Valkyrie", 2024, "Matte Black")
-const car2 = new car ("Ford", "Mustang", 2023, "White")
+const car1 = new car("Aston Martin", "Valkyrie", 2024, "Matte Black")
+const car2 = new car("Ford", "Mustang", 2023, "White")
 
 console.log(car1.producer)
 car2.drive()
@@ -637,24 +637,24 @@ car2.drive()
 //          ex. static keyword, encapsulation, inheritance
 
 class product {
-    constructor(name, price){
+    constructor(name, price) {
         this.name = name;
-        this.price= price;
+        this.price = price;
     }
 
-    displayProduct (){
+    displayProduct() {
         console.log(`Product: ${this.name}`)
         console.log(`Price $${this.price.toFixed(2)}`)
     }
 
-    calculateTotal(salesTax){
+    calculateTotal(salesTax) {
         return this.price + (this.price * salesTax)
     }
 }
 
 const salesTax = 0.05
 
-const product1 = new product ("Cardigan", 59.99)
+const product1 = new product("Cardigan", 59.99)
 product1.displayProduct()
 
 const total222 = product1.calculateTotal(salesTax)
@@ -668,13 +668,13 @@ console.log(`Total price (with tax): ${total222.toFixed(2)}`)
 class MathUtil {
     static PI = 3.14159
 
-    static getDiameter(radius){
+    static getDiameter(radius) {
         return radius * 2
     }
-    static getCircumference(radius){
+    static getCircumference(radius) {
         return 2 * this.PI * radius
     }
-    static getArea(radius){
+    static getArea(radius) {
         return this.PI * radius * radius
     }
 }
@@ -684,15 +684,15 @@ console.log(MathUtil.getArea(22))
 console.log(MathUtil.getCircumference(10))
 
 
-class User{
+class User {
     static userCount = 0
 
-    constructor(username){
+    constructor(username) {
         this.username = username
         User.userCount++
     }
 
-    static getUserCount (){
+    static getUserCount() {
         console.log(`There are ${User.userCount} users currently online`)
     }
 }
@@ -709,30 +709,30 @@ User.getUserCount()
 //               from an existing class (parent -> child)
 //               helps with code reusability
 
-class animal{
+class animal {
     alive = true;
-    eat(){
+    eat() {
         console.log(`This ${this.name} is eating`)
     }
-    sleep(){
+    sleep() {
         console.log(`This ${this.name} is sleeping`)
     }
 }
-class Rabbit extends animal{
+class Rabbit extends animal {
     name = "rabbit"
-    run(){
+    run() {
         console.log(`This ${this.name} is running`)
     }
 }
-class Fish extends animal{
+class Fish extends animal {
     name = "fish"
-    swim (){
+    swim() {
         console.log(`This ${this.name} is swimming`)
     }
 }
-class Hawk extends animal{
+class Hawk extends animal {
     name = "hawk"
-    fly(){
+    fly() {
         console.log(`This ${this.name} is flying`)
     }
 }
@@ -752,41 +752,41 @@ rabbit.run()
 //         this = this object
 //         super = the parent
 
-class Animal{
-    constructor(name, age){
+class Animal {
+    constructor(name, age) {
         this.name = name
         this.age = age
     }
-    move(speed){
+    move(speed) {
         console.log(`The ${this.name} moves at the speed of ${speed}`)
     }
 }
-class Rabbitt extends Animal{
+class Rabbitt extends Animal {
     constructor(name, age, runSpeed) {
         super(name, age)
         this.runSpeed = runSpeed
     }
-    run(){
+    run() {
         console.log(`This ${this.name} can run`)
         super.move(this.runSpeed)
     }
 }
-class Whale extends Animal{
+class Whale extends Animal {
     constructor(name, age, swimSpeed) {
         super(name, age)
         this.swimSpeed = swimSpeed
     }
-    swim(){
+    swim() {
         console.log(`This ${this.name} can swim`)
         super.move(this.swimSpeed)
     }
 }
-class Eagle extends Animal{
+class Eagle extends Animal {
     constructor(name, age, flySpeed) {
         super(name, age)
         this.flySpeed = flySpeed
     }
-    fly(){
+    fly() {
         console.log(`This ${this.name} can fly`)
         super.move(this.flySpeed)
     }
@@ -804,32 +804,32 @@ bunny.run()
 // validate and modify a value when reading/writing a property
 
 class Rectangle {
-    constructor(width, height){
+    constructor(width, height) {
         this.width = width
         this.height = height
     }
 
-    set width(newWidth){
-        if(newWidth > 0){
+    set width(newWidth) {
+        if (newWidth > 0) {
             this._width = newWidth
         } else {
             console.error("invalid number")
         }
     }
-    set height(newHeight){
-        if(newHeight > 0){
+    set height(newHeight) {
+        if (newHeight > 0) {
             this._height = newHeight
         } else {
             console.error("invalid number")
         }
     }
-    get width(){
+    get width() {
         return `${this._width.toFixed(1)}`
     }
-    get height(){
+    get height() {
         return `${this._height.toFixed(1)}`
     }
-    get area (){
+    get area() {
         return `${(this._width * this._height).toFixed(1)}cm^2`
     }
 }
@@ -844,41 +844,41 @@ class Person {
         this.age = age
     }
 
-    set firstName(newFirstName){
-        if (typeof newFirstName === "string" && newFirstName.length > 0){
+    set firstName(newFirstName) {
+        if (typeof newFirstName === "string" && newFirstName.length > 0) {
             this._firstName = newFirstName
         } else {
             console.error("Enter a non-empty string")
         }
     }
-    set lastName(newLastName){
-        if (typeof newLastName === "string" && newLastName.length > 0){
+    set lastName(newLastName) {
+        if (typeof newLastName === "string" && newLastName.length > 0) {
             this._lastName = newLastName
         } else {
             console.error("Enter a non-empty string")
         }
     }
-    set age (newAge){
-        if (typeof newAge === "number" && newAge >= 0){
+    set age(newAge) {
+        if (typeof newAge === "number" && newAge >= 0) {
             this._age = newAge
-        } else{
+        } else {
             console.error("Age must be a non-negative number")
         }
     }
-    get firstName(){
+    get firstName() {
         return this._firstName
     }
-    get lastName(){
+    get lastName() {
         return this._lastName
     }
-    get fullName (){
+    get fullName() {
         return this._firstName + " " + this.lastName
     }
-    get age (){
+    get age() {
         return this._age
     }
 }
-const person = new Person ("Walter", "White", 60)
+const person = new Person("Walter", "White", 60)
 
 console.log(person.fullName)
 
@@ -928,7 +928,7 @@ const person4 = {
     job: "Basketball Player"
 }
 
-const {firstNamee, lastNamee, agee, job} = person4
+const { firstNamee, lastNamee, agee, job } = person4
 
 console.log(firstNamee)
 
@@ -955,7 +955,7 @@ const person5 = {
 }
 console.log(person5.address)
 
-for(const property in person5.address){
+for (const property in person5.address) {
     console.log(person5.address[property])
 }
 
@@ -963,30 +963,30 @@ for(const property in person5.address){
 
 
 class person6 {
-    constructor(name, age, ...address){
+    constructor(name, age, ...address) {
         this.name = name
         this.age = age
         this.address = new Address(...address)
     }
 }
 
-class Address{
-    constructor(street, city, country){
+class Address {
+    constructor(street, city, country) {
         this.street = street
         this.city = city
         this.country = country
     }
 }
-const nibba1 = new person6 ("Osas", 29, "TOmas morato", "RIzal city", "JOrrdan")
+const nibba1 = new person6("Osas", 29, "TOmas morato", "RIzal city", "JOrrdan")
 console.log(nibba1)
 
 ////
 // arrays of objects
 
-const fruits =  [{name: "Apple", color: "Red", Calories: 99}, 
-                {name: "Orange", color: "orange", Calories: 95}, 
-                {name: "kiwi", color: "brown", Calories: 11}, 
-                {name: "durian", color: "pink", Calories: 109}]
+const fruits = [{ name: "Apple", color: "Red", Calories: 99 },
+{ name: "Orange", color: "orange", Calories: 95 },
+{ name: "kiwi", color: "brown", Calories: 11 },
+{ name: "durian", color: "pink", Calories: 109 }]
 
 console.log(fruits[0].name)
 console.log(fruits)
@@ -1005,7 +1005,7 @@ console.log(maxFruit)
 //           sorts elements as strings in lexicographic order
 //           lexicographic = (alphabet + numbers +  symbols) as strings
 
-let numberss2 = [1,2,5,4,3,9,6,7,8,11]
+let numberss2 = [1, 2, 5, 4, 3, 9, 6, 7, 8, 11]
 numberss2.sort((a, b) => a - b)
 console.log(numberss2)
 
@@ -1027,28 +1027,28 @@ console.log(date)
 //           allow for private variables and state maintenance 
 //           used frequently in JS frameworks: React, vue, angular
 
-function outer(){
+function outer() {
     let message = "helloo"
 
-    function inner(){
+    function inner() {
         console.log(message)
     }
     inner()
 }
 outer()
 
-function createCounter(){
+function createCounter() {
     let count = 0
-    function increment(){ 
+    function increment() {
         count++
         console.log(`Count increased to ${count}`)
     }
 
-    function getCount(){
+    function getCount() {
         return count
     }
 
-    return {increment, getCount}
+    return { increment, getCount }
 }
 const counter = createCounter()
 counter.increment()
@@ -1056,24 +1056,24 @@ counter.increment()
 console.log(`current count is ${counter.getCount()}`)
 
 
-function createGame(){
-    let score = 0 
+function createGame() {
+    let score = 0
 
-    function increaseScore(points){
+    function increaseScore(points) {
         score += points
         console.log(`+${points}pts`)
     }
-    
-    function decreaseScore(points){
+
+    function decreaseScore(points) {
         score -= points
         console.log(`-${points}pts`)
     }
-    
-    function getScore (){
+
+    function getScore() {
         return score
     }
 
-    return{increaseScore, decreaseScore, getScore}
+    return { increaseScore, decreaseScore, getScore }
 }
 const game = createGame()
 
@@ -1087,10 +1087,10 @@ console.log(`total score: ${game.getScore()}`)
 //                times are approximate (varies based on the workload of the JS runtime environment)
 //                setTimeout(callback, delay)
 
-setTimeout (() => console.log('put tank in a mall'), 2000)
+setTimeout(() => console.log('put tank in a mall'), 2000)
 
-function startTimer(){
-    setTimeout (() => window.alert('put tank in a mall'), 2000)
+function startTimer() {
+    setTimeout(() => window.alert('put tank in a mall'), 2000)
 }
 
 ////
@@ -1099,7 +1099,7 @@ function startTimer(){
 //              Write reusable code for many different apps.
 //              can contain variables, classes, functions ... and more
 
-import {PII, getCircumference, getArea, getVolume} from './mathUtil.js'
+import { PII, getCircumference, getArea, getVolume } from './mathUtil.js'
 
 const area2 = getArea(20)
 
@@ -1114,11 +1114,13 @@ console.log(`${area2.toFixed(2)}cm`)
 //                 (I/O operations, network requests, fetching data, 
 //                  Handled with: callbacks, promises, aync/wait)
 
-function func1(callback){
-    setTimeout(()=> {console.log("task 1")
-        callback()}, 3000)
+function func1(callback) {
+    setTimeout(() => {
+        console.log("task 1")
+        callback()
+    }, 3000)
 }
-function func2(){
+function func2() {
     console.log("task 2")
     console.log("task 3")
     console.log("task 4")
@@ -1134,29 +1136,29 @@ func1(func2)
 //  finally {} = (optional) always executes. used mostly for clean up
 //              ex. close files, close connections, release resources
 
-try{
-    console.log(tanginaa)
-}
-catch(err){
-    console.error(err)
-}
+// try {
+//     console.log(tanginaa)
+// }
+// catch (err) {
+//     console.error(err)
+// }
 
-try{
-    // const dividend = Number(window.prompt(`Enter a dividend: `))
-    // const divisor = Number(window.prompt(`Enter a divisor: `))
+// try {
+//     // const dividend = Number(window.prompt(`Enter a dividend: `))
+//     // const divisor = Number(window.prompt(`Enter a divisor: `))
 
-    if(divisor == 0){
-        throw new Error("tangnaisnd mo")
-    }
-    if (isNaN(dividend) || isNaN(divisor)){
-        throw new Error("isa ka pa")
-    }
-    const result = dividend / divisor
-    console.log(result)
-}
-catch(errorr){
-    console.error(errorr)
-}
+//     if (divisor == 0) {
+//         throw new Error("tangnaisnd mo")
+//     }
+//     if (isNaN(dividend) || isNaN(divisor)) {
+//         throw new Error("isa ka pa")
+//     }
+//     const result = dividend / divisor
+//     console.log(result)
+// }
+// catch (errorr) {
+//     console.error(errorr)
+// }
 
 ////
 // DOM = Document Object Model
@@ -1189,7 +1191,7 @@ console.log(pElements)
 // for(let pElement of pElements){
 //     pElement.style.backgroundColor = "pink"
 // }
-Array.from(pElements).forEach(pElement =>{
+Array.from(pElements).forEach(pElement => {
     pElement.style.backgroundColor = "pink"
 })
 
@@ -1212,7 +1214,7 @@ Array.from(pElements).forEach(pElement =>{
 
 const ulElements = document.querySelectorAll("ul")
 
-ulElements.forEach(ulElement =>{
+ulElements.forEach(ulElement => {
     const firstChild = ulElement.firstElementChild
     firstChild.style.backgroundColor = "pink"
 })
@@ -1224,11 +1226,309 @@ ulElements.forEach(ulElement =>{
 
 const myBox = document.getElementById("myBox")
 
-function changeColor(event){
-      
+function changeColor(event) {
+
 }
 
-myBox.addEventListener("click", callback)
+myBox.addEventListener("click", event => {
+    event.target.style.backgroundColor = "tomato"
+    event.target.textContent = "lamao"
+})
+
+myBox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "yellow"
+    event.target.textContent = "brrrrr"
+})
+
+myBox.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = "pink"
+    event.target.textContent = "lamao"
+})
+
+////
+// keyEvents = events: keydown, keyup
+//             addEventListener(event, callback);
+
+const moveAmount = 10
+let xx = 0
+let yy = 0
+
+document.addEventListener("keydown", event => {
+    // myBox.textContent = "nword"
+    console.log(event)
+    if (event.key.startsWith("Arrow")) {
+        event.preventDefault()
+        switch (event.key) {
+            case "ArrowUp":
+                yy -= moveAmount;
+                break
+            case "ArrowDown":
+                yy += moveAmount
+                break
+            case "ArrowLeft":
+                xx -= moveAmount
+                break
+            case "ArrowRight":
+                xx += moveAmount
+                break
+        }
+        myBox.style.top = `${y}px`
+        myBox.style.left = `${x}px`
+    }
+})
+
+// document.addEventListener("keyup", event => {
+//     console.log(event)
+//     myBox.textContent = "dats crazy"
+// })
+
+////
+// NodeList = static collection of HTML elements by (id, class, element)
+//            can be created by using querySelectorAll()
+//            similar to an array, but no (map, filter, reduce)
+//            NodeList won't update to automatically reflect changes
+
+let buttons = document.querySelectorAll(".myButtons")
+
+buttons.forEach(button => {
+    button.style.backgroundColor = "green"
+    button.style.color = "white"
+})
+
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+        event.target.style.backgroundColor = "tomato"
+    })
+})
+buttons.forEach(button => {
+    button.addEventListener("mouseover", event => {
+        event.target.style.backgroundColor = "yellow"
+        button.style.color = "black"
+    })
+})
+buttons.forEach(button => {
+    button.addEventListener("mouseout", event => {
+        event.target.style.backgroundColor = "gray"
+    })
+})
+
+////
+// classList = element property in javascript used to interact with an element's
+//             list of classes (CSS classes) 
+//             Allows you to make reusable classes for many elements across your webpage
+
+////
+// callback hell = 
+
+// function task1(callback) {
+//     setTimeout(() => {
+//         console.log('task1 complete lil bro')
+//         callback()
+//     }, 1500)
+// }
+// function task2(callback) {
+//     setTimeout(() => {
+//         console.log('task2 complete lil bro')
+//         callback()
+//     }, 5500)
+// }
+// function task3(callback) {
+//     setTimeout(() => {
+//         console.log('task3 complete lil bro')
+//         callback()
+//     }, 3500)
+// }
+// function task4(callback) {
+//     setTimeout(() => {
+//         console.log('task4 complete lil bro')
+//         callback()
+//     }, 2500)
+// }
+
+// task1(() => {
+//     task2(() => {
+//         task3(() => {
+//             task4(() => console.log("all tasks complete"))
+//         })
+//     })
+// })
+
+////
+// Promise = an object that manages asynchronous operations
+//           Wrap a promise object around {asynchronous code}
+//           "i promise to return a value"
+//           PENDING -> RESOLVED OR REJECTED
+//           new Promise ((resolve, reject) => {asynchronous code})
+
+function walkDog() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const dogWalked = true
+
+            if (dogWalked) {
+                resolve('dog: walked')
+            } else {
+                reject('dog: unwalked')
+            }
+
+        }, 2500)
+    })
+}
+function doDishes() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const doneDishes = true
+
+            if (doneDishes) {
+                resolve('dishes: done')
+            } else {
+                reject("dishes: undone")
+            }
+
+        }, 3500)
+    })
+}
+function dolaundry() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const doneLaundy = true
+
+            if (doneLaundy) {
+                resolve('laundry: done')
+            } else {
+                reject("tangina mo")
+            }
+
+        }, 1500)
+    })
+}
+
+// walkDog().then(value => { console.log(value); return doDishes() })
+//     .then(value => { console.log(value); return dolaundry() })
+//     .then(value => console.log(value)).catch(errorrr => console.error("tagnina mo ka"))
+
+////
+// Async/Await = Async = makes a function return a promise
+//               Await = makes an async function wait for a promise
+
+//              Allows you write aynchronous code in a synchronous manner
+//              Async doesn't have resolve or reject parameters
+//              Everything after Await is placed in an event queue
+
+
+function walkDog2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const dogWalked2 = true
+
+            if (dogWalked2) {
+                resolve('dog: walked')
+            } else {
+                reject('dog: unwalked')
+            }
+
+        }, 2500)
+    })
+}
+function doDishes2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const doneDishes2 = true
+
+            if (doneDishes2) {
+                resolve('dishes: done')
+            } else {
+                reject("dishes: undone")
+            }
+
+        }, 3500)
+    })
+}
+function dolaundry2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const doneLaundy2 = true
+
+            if (doneLaundy2) {
+                resolve('laundry: done')
+            } else {
+                reject("tangina mo")
+            }
+
+        }, 1500)
+    })
+}
+
+async function doChores() {
+    try {
+        const walkDogResult = await walkDog2()
+        console.log(walkDogResult)
+        const doDishess = await doDishes2()
+        console.log(doDishess)
+        const doLaundryy = await dolaundry2()
+        console.log(doLaundryy)
+        console.log("tapuz")
+    }
+    catch (errr) {
+        console.error(errr)
+    }
+}
+
+doChores()
+
+////
+// JSON = 
+
+////
+// fetch = Function used for making HTTP requests to fetch resources
+//         (JSON style data, images, files)
+//         Simplifies asynchrounous data fetching in JavaScript and
+//         used for interacting with APIs to retrieve and send
+//         data asynchronously over the web
+//         fetch(url, {options})
+
+fetchData()
+
+async function fetchData() {
+
+    try {
+
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase()
+
+
+
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+
+        if (!response.ok) {
+            throw new Error("Could not fetch resource")
+        }
+
+        const data = await response.json()
+        const pokemonSprite = data.sprites.front_default
+        const imageElement = document.getElementById("pokemonSprite")
+
+        imageElement.src = pokemonSprite
+        imageElement.style.display = "block"
+
+        console.log(data)
+
+
+    }
+    catch (error) {
+        console.error(error)
+    }
+
+
+}
+
+
+
 
 
 
